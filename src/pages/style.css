@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* --- 1. Grid でページ全体のレイアウトを定義 --- */
+.container {
+    display: grid;
+    /* 各エリアの行の高さを定義 */
+    grid-template-rows: auto 1fr auto; /* ヘッダー(auto), メインコンテンツ(1fr), フッター(auto) */
+    /* 各エリアの列の幅を定義 */
+    grid-template-columns: 1fr 250px; /* メインカラム(1fr), サイドバー(250px) */
+    /* 各エリアの名前を定義 */
+    grid-template-areas:
+        "header header"   /* 1行目はヘッダーが2列分 */
+        "main   aside"    /* 2行目はメインとサイドバー */
+        "footer footer";  /* 3行目はフッターが2列分 */
+    min-height: 100vh; /* 画面の高さ全体を使う */
+}
+
+header {
+    grid-area: header; /* headerエリアに配置 */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+main {
+    grid-area: main; /* mainエリアに配置 */
+    padding: 20px;
+    background-color: #fff;
+}
+
+aside {
+    grid-area: aside; /* asideエリアに配置 */
+    background-color: #eee;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}
+
+footer {
+    grid-area: footer; /* footerエリアに配置 */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* --- 2. Flexbox で Gridセル内の要素を整列 --- */
+
+/* ヘッダー内 */
+header .header-content {
+    display: flex; /* Flexコンテナに */
+    justify-content: space-between; /* 左右の端に寄せる */
+    align-items: center; /* 垂直方向中央揃え */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* リストアイテムを横並びにする */
+    gap: 15px; /* アイテム間の余白 */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* メインコンテンツ内のヒーローセクション */
+.hero-section {
+    background-color: #007bff;
+    color: white;
+    padding: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-section h2 {
+    margin-top: 0;
+}
+
+/* メインコンテンツ内のカードセクション */
+.card-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card-group {
+    display: flex; /* カードを横並びにする */
+    gap: 20px; /* カード間の余白 */
+    flex-wrap: wrap; /* 画面が狭くなったら折り返す */
+    justify-content: center; /* 中央揃え（任意） */
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* 各カードが柔軟に幅を占める */
+    min-width: 200px; /* 最小幅 */
+}
+
+/* フッター内 */
+footer .footer-content {
+    display: flex; /* Flexコンテナに */
+    justify-content: space-between; /* 左右の端に寄せる */
+    align-items: center; /* 垂直方向中央揃え */
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* --- レスポンシブ対応 (FlexboxとGridの組み合わせの柔軟性) --- */
+@media (max-width: 768px) {
+    .container {
+        /* 画面幅が狭い場合、サイドバーをメインの下に配置 */
+        grid-template-columns: 1fr; /* 1列にする */
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+    }
+
+    header .header-content {
+        flex-direction: column; /* ヘッダーの要素を縦並びにする */
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+        justify-content: center; /* 中央揃え */
+    }
+
+    aside {
+        border-left: none; /* ボーダーを削除 */
+        border-top: 1px solid #ccc; /* 上にボーダーを追加 */
+    }
+}
