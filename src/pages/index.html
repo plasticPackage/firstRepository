@@ -4,59 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renderポートフォリオ（プロフィール）</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 50px 25px;
-        }
-        .container {
-            background-color: #fff;
-            padding: 40px 60px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        h1 {
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        .link-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-        .link-button:hover {
-            background-color: #218838;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="container">
-        <h1>プロフィール</h1>
+
+         <header>
+            <div class="header-content">
+                <h1>プロフィール</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">ホーム</a></li>
+                        <li><a href="#">製品</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        
         <p>名前:遠藤寛大</p>
-        <p>スキル:ほとんどないですが頑張ります！</p>
+        <p>スキル:ほとんどないです！if文はまだわからないですが、頑張ります！</p>
         
         <br>
         <br>
 
+        <iframe width="866" height="487" src="https://www.youtube.com/embed/cKL0Hkro6pw" title="【深圳夜景2023】巨大プロジェクションマッピング|ノーカット" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+
+        <br>
+        <br>
 
 
         <p onclick="location.href='/src/pages/sample3.html'">自分で得意だと思っている技術</p>
@@ -134,6 +112,8 @@
 
         <h1>カードゲーム</h1>
         <p>カードゲームも得意です。ほぼ全て勝ってきました。</p>
+        <p>LOST ARCHIVE</p>
+        <img src="/public/images/common/001-2.jpg" alt="lost archive">
         <br>
         <br>
         <br>
@@ -168,6 +148,9 @@
             <p>出力</p>
             <p>名前:Taro,年齢:30</p>
         </div>
+         <br>
+        <br>
+        <br>
         <div>
             <p>下は私のJavaコードです。どうぞ。</p>
             <p>String word = "hogehoge";</p>
@@ -176,6 +159,9 @@
                <p>System.out.println(output);</p>
 
         </div>
+         <br>
+        <br>
+        <br>
         <div>
             <p>下は私のTypeScriptコードです。どうぞ。</p>
             <p>const word: String = "hogehoge";</p>
@@ -185,6 +171,9 @@
             <p>彼はおもむろにこう言った。</p>
             <p>『 hogehoge 』、と。</p>
         </div>
+         <br>
+        <br>
+        <br>
         <div>
             <p>下は私のC++コードです。どうぞ。</p>
             <p>name = "Taro"</p>
