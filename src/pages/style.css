@@ -1,24 +1,61 @@
 body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 50px 25px;
+        }
+        /* --- 1. Grid でページ全体のレイアウトを定義 --- */
+        .container {
 
-/* --- 1. Grid でページ全体のレイアウトを定義 --- */
-.container {
-    display: grid;
-    /* 各エリアの行の高さを定義 */
-    grid-template-rows: auto 1fr auto; /* ヘッダー(auto), メインコンテンツ(1fr), フッター(auto) */
-    /* 各エリアの列の幅を定義 */
-    grid-template-columns: 1fr 250px; /* メインカラム(1fr), サイドバー(250px) */
-    /* 各エリアの名前を定義 */
-    grid-template-areas:
-        "header header"   /* 1行目はヘッダーが2列分 */
-        "main   aside"    /* 2行目はメインとサイドバー */
-        "footer footer";  /* 3行目はフッターが2列分 */
-    min-height: 100vh; /* 画面の高さ全体を使う */
-}
+            display: grid;
+            /* 各エリアの行の高さを定義 */
+            grid-template-rows: auto 1fr auto; /* ヘッダー(auto), メインコンテンツ(1fr), フッター(auto) */
+            /* 各エリアの列の幅を定義 */
+            grid-template-columns: 1fr 250px; /* メインカラム(1fr), サイドバー(250px) */
+            /* 各エリアの名前を定義 */
+            grid-template-areas:
+                "header header"   /* 1行目はヘッダーが2列分 */
+                "main   aside"    /* 2行目はメインとサイドバー */
+                "footer footer";  /* 3行目はフッターが2列分 */
+            min-height: 100vh; /* 画面の高さ全体を使う */
+
+            background-color: #fff;
+            padding: 40px 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .link-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .link-button:hover {
+            background-color: #218838;
+        }
+
+
+
 
 header {
     grid-area: header; /* headerエリアに配置 */
