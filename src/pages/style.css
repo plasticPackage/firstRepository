@@ -2,31 +2,31 @@ body {
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            
             min-height: 100vh;
             margin: 0;
             background-color: #f4f4f4;
             color: #333;
-            padding: 50px 25px;
+            padding: 20px 10px;
         }
         /* --- 1. Grid でページ全体のレイアウトを定義 --- */
         .container {
 
             display: grid;
             /* 各エリアの行の高さを定義 */
-            grid-template-rows: auto 1fr auto; /* ヘッダー(auto), メインコンテンツ(1fr), フッター(auto) */
+            grid-template-rows: auto auto 1fr auto; /* ヘッダー(auto), メインコンテンツ(1fr), フッター(auto) */
             /* 各エリアの列の幅を定義 */
             grid-template-columns: 1fr 250px; /* メインカラム(1fr), サイドバー(250px) */
             /* 各エリアの名前を定義 */
             grid-template-areas:
                 "header header"   /* 1行目はヘッダーが2列分 */
+                "movie movie"    /* 2行目はユーチューブ動画の埋め込み */
                 "main   aside"    /* 2行目はメインとサイドバー */
                 "footer footer";  /* 3行目はフッターが2列分 */
             min-height: 100vh; /* 画面の高さ全体を使う */
 
             background-color: #fff;
-            padding: 40px 60px;
+            padding: 20px 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -64,6 +64,13 @@ header {
     padding: 10px 20px;
 }
 
+
+movie {
+    grid-area: movie; /* movieエリアに配置 */
+    width: 100%;
+    background-color: #fff;
+}
+
 main {
     grid-area: main; /* mainエリアに配置 */
     padding: 20px;
@@ -76,6 +83,8 @@ aside {
     padding: 20px;
     border-left: 1px solid #ccc;
 }
+
+
 
 footer {
     grid-area: footer; /* footerエリアに配置 */
@@ -90,6 +99,13 @@ footer {
 header .header-content {
     display: flex; /* Flexコンテナに */
     justify-content: space-between; /* 左右の端に寄せる */
+    align-items: center; /* 垂直方向中央揃え */
+}
+
+movie {
+    display: flex; /* Flexコンテナに */
+    flex-direction: column; /* ヘッダーの要素を縦並びにする */
+    
     align-items: center; /* 垂直方向中央揃え */
 }
 
@@ -161,6 +177,7 @@ footer .social-links a {
         grid-template-columns: 1fr; /* 1列にする */
         grid-template-areas:
             "header"
+            "movie"
             "main"
             "aside"
             "footer";
@@ -181,3 +198,73 @@ footer .social-links a {
         border-top: 1px solid #ccc; /* 上にボーダーを追加 */
     }
 }
+
+
+  
+  #fondo{
+    background: url(https://i.imgur.com/ygVpJMP.jpg) no-repeat left top;
+    /*background: url(https://s28.postimg.org/3z90275y5/yg_Vp_JMP.jpg) no-repeat left top;*/
+    background-size: cover;
+    height: 100%;
+    /*position: absolute;*/
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  #encima{
+    /*position: absolute;*/
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    -webkit-mask: url(https://i.imgur.com/AYJuRke.png);
+    /*-webkit-mask: url(https://veuwer.com/i/3fxb.png);*/
+    -webkit-mask-size: 3000% 100%;
+    
+    -webkit-animation: mask-playzero 2s steps(29) infinite;
+  }
+  
+  #encima:before{
+    content: '';
+    background: url(https://i.imgur.com/dJLNhFN.jpg) no-repeat left top;
+    /*background: url(https://s22.postimg.org/urrt8jfq9/d_JLNh_FN.jpg) no-repeat left top;*/
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+  }
+  
+  @-webkit-keyframes mask-playzero {
+      from {
+      -webkit-mask-position: 0 0;
+      -ms-mask-position: 0 0;
+      -moz-mask-position: 0 0;
+      -o-mask-position: 0 0;
+      mask-position: 0 0;
+  }
+  to {
+      -webkit-mask-position: 100% 0;
+      -ms-mask-position: 100% 0;
+      -moz-mask-position: 100% 0;
+      -o-mask-position: 100% 0;
+      mask-position: 100% 0;
+  }
+    
+    @keyframes mask-playzero {
+      from {
+      -webkit-mask-position: 0 0;
+      -ms-mask-position: 0 0;
+      -moz-mask-position: 0 0;
+      -o-mask-position: 0 0;
+      mask-position: 0 0;
+  }
+  to {
+      -webkit-mask-position: 100% 0;
+      -ms-mask-position: 100% 0;
+      -moz-mask-position: 100% 0;
+      -o-mask-position: 100% 0;
+      mask-position: 100% 0;
+  }
