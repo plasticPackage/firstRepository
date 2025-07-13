@@ -1,0 +1,43 @@
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+        
+h2:first-letter {
+    font-size: 2em;
+    color: #7172ac;
+}
+h2 {
+    position: relative;
+    line-height: 1.4;
+    padding:0.25em 1em;
+    display: inline-block;
+}
+
+h2:before, h2:after { 
+    content:'';
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    display: inline-block;
+}
+
+h2:before {
+    border-left: solid 1px #7172ac;
+    border-top: solid 1px #7172ac;
+    top:0;
+    left: 0;
+}
+
+h2:after {
+    border-right: solid 1px #7172ac;
+    border-bottom: solid 1px #7172ac;
+    bottom:0;
+    right: 0;
+}
+
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
