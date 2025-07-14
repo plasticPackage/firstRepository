@@ -3,7 +3,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: skyblue;
+  background: rgb(54, 244, 57);
   text-align:center;
   line-height: 80px;
   transition: all 1.2s;
@@ -147,6 +147,7 @@
   outline-color: transparent;
   outline-offset: 12px;
   text-shadow: 2px 2px 3px #FFF;
+  
 }
 
 
