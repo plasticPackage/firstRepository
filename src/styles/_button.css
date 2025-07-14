@@ -15,22 +15,24 @@
 
 
 .btn-box {
+ 
   display: inline-block;
   width: 200px;
   text-align: center
   font-size: 16px;
-  color: #000;
+  color: #000000;
   text-decoration: none;
   font-weight: bold;
   padding: 12px 24px;
   position: relative;
-  border: 2px solid #000;
+  border: 2px solid #000000;
   transition: .4s;
+  background-color: white;
 }
 
 .btn-box:hover {
   border: 2px solid transparent;
-  color: #000000;
+  color: #9ec34b;
 }
 
 .btn-box:before, .btn-box:after {
@@ -47,14 +49,14 @@
 }
 
 .btn-box:before {
-  border-bottom: 2px solid #000000;
-  border-left: 2px solid #000000;
+  border-bottom: 2px solid #9ec34b;
+  border-left: 2px solid #9ec34b;
   transform-origin: 100% 0%;
 }
 
 .btn-box:after {
-  border-top: 2px solid #000000;
-  border-right: 2px solid #000000;
+  border-top: 2px solid #9ec34b;
+  border-right: 2px solid #9ec34b;
   transform-origin: 0% 100%;
 }
 
@@ -136,6 +138,7 @@
   outline-offset: 0px;
   text-shadow: none;
   transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+  background-color: white;
 }
 
 .btn-shine:hover {
@@ -145,4 +148,14 @@
   outline-offset: 12px;
   text-shadow: 2px 2px 3px #FFF;
 }
+
+
+
+
+
+
+
+
+
+
 
