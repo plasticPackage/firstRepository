@@ -1,0 +1,49 @@
+
+main {
+    grid-area: main; /* mainエリアに配置 */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.interactive-elements{
+    display: flex; /* カードを横並びにする */
+    gap: 20px; /* カード間の余白 */
+    flex-wrap: wrap; /* 画面が狭くなったら折り返す */
+    justify-content: center; /* 中央揃え（任意） */
+}
+
+
+/* メインコンテンツ内のヒーローセクション */
+.hero-section {
+    background-color: #007bff;
+    color: white;
+    padding: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-section h2 {
+    margin-top: 0;
+}
+
+/* メインコンテンツ内のカードセクション */
+.card-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card-group {
+    display: flex; /* カードを横並びにする */
+    gap: 20px; /* カード間の余白 */
+    flex-wrap: wrap; /* 画面が狭くなったら折り返す */
+    justify-content: center; /* 中央揃え（任意） */
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* 各カードが柔軟に幅を占める */
+    min-width: 200px; /* 最小幅 */
+}
