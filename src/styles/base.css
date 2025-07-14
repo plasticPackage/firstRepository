@@ -8,6 +8,7 @@ h2:first-letter {
     color: #7172ac;
 }
 h2 {
+    font-size: 1.5em;
     position: relative;
     line-height: 1.4;
     padding:0.25em 1em;

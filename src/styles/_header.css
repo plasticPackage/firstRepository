@@ -1,0 +1,30 @@
+
+header {
+    grid-area: header; /* headerエリアに配置 */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+
+
+/* ヘッダー内 */
+header .header-content {
+    display: flex; /* Flexコンテナに */
+    justify-content: space-between; /* 左右の端に寄せる */
+    align-items: center; /* 垂直方向中央揃え */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* リストアイテムを横並びにする */
+    gap: 15px; /* アイテム間の余白 */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
