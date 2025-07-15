@@ -1,0 +1,22 @@
+
+
+footer {
+    grid-area: footer; /* footerエリアに配置 */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+/* フッター内 */
+footer .footer-content {
+    display: flex; /* Flexコンテナに */
+    justify-content: space-between; /* 左右の端に寄せる */
+    align-items: center; /* 垂直方向中央揃え */
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}

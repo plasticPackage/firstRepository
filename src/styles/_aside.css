@@ -1,0 +1,6 @@
+aside {
+    grid-area: aside; /* asideエリアに配置 */
+    background-color: #eee;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}

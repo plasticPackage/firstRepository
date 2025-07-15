@@ -4,7 +4,6 @@
   align-items: center; /* 垂直方向の中央揃え */
   justify-content: center; /* 水平方向の中央揃え (おまけ) */
   height: 200px; /* 親要素の高さは必要 */
-  
 }
 
 .container-flex p {
@@ -14,7 +13,8 @@
 
 
 .box11{
-    padding: 0.5em 1em;
+  margin: 30;  
+  padding: 0.5em 1em;
     margin: 2em 0;
     color: #5d627b;
     background: white;
@@ -26,6 +26,7 @@
     padding: 0;
 }
 .box1 {
+    margin: 30;
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
@@ -38,7 +39,8 @@
 
 
 .box21{
-    padding: 0.5em 1em;
+    margin: 300;
+    padding: 1em 2em;
     background: -moz-linear-gradient(#ffb03c, #ff708d);
     background: -webkit-linear-gradient(#ffb03c, #ff708d);
     background: linear-gradient(to right, #ffb03c, #ff708d);
@@ -47,4 +49,20 @@
 .box21 p {
     margin: 0; 
     padding: 0;
+}
+
+.boxhover{
+  margin: 30;
+  padding:50px;
+  border-radius: 50px;
+}
+
+.boxhover:hover {
+  border-color: #000000;
+  box-shadow: inset 0 0 50px rgba(2, 0, 129, 0.197), 0 0 100px rgba(1, 7, 129, 0.5);
+  outline-color: transparent;
+  outline-offset: 12px;
+  text-shadow: 2px 2px 3px #FFF;
+  transition:0.1s;
+  
 }
