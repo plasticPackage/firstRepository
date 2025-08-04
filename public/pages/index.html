@@ -166,7 +166,18 @@
 
                 <div class="boxhover">
                     <p>下は私のC++コードです。どうぞ。</p>
-                    
+                    #include <iostream><br>
+                    #include <vector><br>
+
+                    int main() {<br>
+                        try {<br>
+                            std::vector<int> huge_vector(1000000000000000);<br> 
+                        } catch (const std::bat_alloc& e) {<br>
+                            std::serr << "メモリ確保に失敗しました: " << e.hat() << std::endl;<br>
+                            return 1;<br>
+                        }<br>
+                        return 0;<br>
+                    }<br>
                 </div>
                 
                 
