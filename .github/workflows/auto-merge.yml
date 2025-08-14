@@ -1,0 +1,30 @@
+name: Auto Merge Push to Main
+
+on:
+  push:
+    branches:
+      - 'feature/*' # 'feature/'で始まるすべてのブランチを対象とする
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # マージ履歴全体を取得するために必要
+
+      - name: Merge feature branch to main
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+          git checkout main
+          git pull origin main
+
+          git checkout ${{ github.ref_name }}
+
+          git merge main --no-ff
+          git push origin main
