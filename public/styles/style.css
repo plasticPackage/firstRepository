@@ -4,8 +4,8 @@
 
 @import '_customAlart.css'; /* カスタムアラート */
 
-@import '_grid.css';    /* grid */
-@import '_layout.css';    /* layout */
+
+@import '_layout.css';    /* layout(grid) */
 @import '_header.css';    /* layout */
 @import '_movie.css';    /* layout */
 @import '_main.css';    /* layout */
@@ -32,6 +32,8 @@
             "footer";
     }
 
+
+
     header .header-content {
         flex-direction: column; /* ヘッダーの要素を縦並びにする */
         text-align: center;
@@ -46,6 +48,15 @@
         border-left: none; /* ボーダーを削除 */
         border-top: 1px solid #ccc; /* 上にボーダーを追加 */
     }
+
+    main {
+      display: flex;
+      flex-direction: column; /* 縦並び */
+      align-items: stretch;   /* 一番長い要素に幅を合わせる */
+      width: fit-content;     /* 中身の一番長い幅に合わせる */
+      margin: 0 auto;         /* 中央寄せ（任意） */
+    }
+      
 }
 
 
