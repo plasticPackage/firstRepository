@@ -12,6 +12,18 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
+
+<!-- カスタムアラート -->
+<div id="alert-overlay">
+  <div id="alert-box">
+    <div id="alert-message">【警告】この操作は刑法23条に違反いたしております。あなたには50万円の科料が課せられます。現在時刻より2時間以内に振り込みがない場合は、警視庁サイバー犯罪課よりお勤めの会社に連絡をいたします。内容を確認してください。</div>
+    <button id="alert-close">OK</button>
+  </div>
+</div>
+
+<!-- 警告音 -->
+<audio id="alert-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
     <div class="container">
         <main>
 
@@ -42,7 +54,7 @@
   </div>
 
   <button type="submit">支払う</button>
-  <script src="warning.js" defer></script>
+  
 </form>
             
         </main>
@@ -50,6 +62,22 @@
 
     </div>
 
+<script>
+  // ページロード時に音を再生
+  window.addEventListener('DOMContentLoaded', function() {
+    const sound = document.getElementById('alert-sound');
+    sound.play().catch(err => {
+      // 自動再生がブロックされた場合はボタン押下時に再生
+      document.getElementById('alert-close').addEventListener('click', () => sound.play());
+    });
+  });
 
+  // 閉じるボタンの動作
+  document.getElementById('alert-close').addEventListener('click', function() {
+    document.getElementById('alert-overlay').style.display = 'none';
+  });
+</script>
+
+  <!-- <script src="warning.js" defer></script> -->
 </body>
 </html>

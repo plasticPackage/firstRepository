@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import '_defaults.css';    /* 基本要素のスタイル  */
 @import '_base.css';    /* 基本要素のスタイル */
+@import '_customAlart.css';
 
 @import '_grid.css';    /* grid */
 @import '_layout.css';    /* layout */
