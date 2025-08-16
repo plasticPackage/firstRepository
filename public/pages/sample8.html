@@ -62,22 +62,22 @@
 
     </div>
 
-<script>
-  // ページロード時に音を再生
-  window.addEventListener('DOMContentLoaded', function() {
-    const sound = document.getElementById('alert-sound');
-    sound.play().catch(err => {
-      // 自動再生がブロックされた場合はボタン押下時に再生
-      document.getElementById('alert-close').addEventListener('click', () => sound.play());
+  <script>
+    // ページロード時に音を再生
+    window.addEventListener('DOMContentLoaded', function() {
+      const sound = document.getElementById('alert-sound');
+      sound.play().catch(err => {
+        // 自動再生がブロックされた場合はボタン押下時に再生
+        document.getElementById('alert-close').addEventListener('click', () => sound.play());
+      });
     });
-  });
 
-  // 閉じるボタンの動作
-  document.getElementById('alert-close').addEventListener('click', function() {
-    document.getElementById('alert-overlay').style.display = 'none';
-  });
-</script>
+    // 閉じるボタンの動作
+    document.getElementById('alert-close').addEventListener('click', function() {
+      document.getElementById('alert-overlay').style.display = 'none';
+    });
+  </script>
 
-  <!-- <script src="warning.js" defer></script> -->
+  
 </body>
 </html>

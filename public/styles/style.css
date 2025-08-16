@@ -16,11 +16,56 @@
 
 
 
+ #alert-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
 
+  /* アラート本体 */
+  #alert-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 5px solid red;
+    text-align: center;
+    max-width: 500px;
+  }
 
+  /* 点滅アニメーション */
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
 
-/* --- 2. Flexbox で Gridセル内の要素を整列 --- */
+  /* メッセージ部分 */
+  #alert-message {
+    color: red;
+    font-size: 2.5rem; /* 大きく */
+    font-weight: bold;
+    animation: blink 1s infinite; /* 点滅 */
+  }
 
+  /* 閉じるボタン */
+  #alert-close {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 5px;
+  }
+
+  #alert-close:hover {
+    background: darkred;
+  }
 
 
 
