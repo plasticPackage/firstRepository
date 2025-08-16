@@ -67,7 +67,7 @@
     background: darkred;
   }
 
-
+/* --- 2. Flexbox で Gridセル内の要素を整列 --- */
 
 /* --- レスポンシブ対応  --- */
 @media (max-width: 768px) {
