@@ -28,3 +28,17 @@ header nav a {
     color: white;
     text-decoration: none;
 }
+
+/* 縦画面時 */
+@media (max-width: 768px) {
+    header .header-content {
+          flex-direction: column; /* ヘッダーの要素を縦並びにする */
+          text-align: center;
+      }
+
+      header nav ul {
+          margin-top: 10px;
+          justify-content: center; /* 中央揃え */
+      }
+
+}

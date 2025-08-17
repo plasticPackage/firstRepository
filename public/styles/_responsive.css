@@ -1,0 +1,43 @@
+
+@media (max-width: 768px) {
+    .container {
+        /* 画面幅が狭い場合、サイドバーをメインの下に配置 */
+        grid-template-columns: 1fr; /* 1列にする */
+        grid-template-areas:
+            "header"
+            "movie"
+            "main"
+            "aside"
+            "footer";
+        width: 100%;       /* 画面幅を超えない */
+        box-sizing: border-box;/* padding込みで幅計算 */
+        overflow-x: auto;      /* はみ出したら横スクロール */
+    }
+
+
+
+      header .header-content {
+          flex-direction: column; /* ヘッダーの要素を縦並びにする */
+          text-align: center;
+      }
+
+      header nav ul {
+          margin-top: 10px;
+          justify-content: center; /* 中央揃え */
+      }
+
+      aside {
+          border-left: none; /* ボーダーを削除 */
+          border-top: 1px solid #ccc; /* 上にボーダーを追加 */
+      }
+
+      main {
+        display: flex;
+        flex-direction: column; /* 縦並び */
+        align-items: stretch;   /* 一番長い要素に幅を合わせる */
+        width: fit-content;     /* 中身の一番長い幅に合わせる */
+        margin: 0 auto;         /* 中央寄せ（任意） */
+      }
+
+      
+}

@@ -11,8 +11,8 @@
     /* 各エリアの名前を定義 */
     grid-template-areas:
         "header header"   /* 1行目 */
-        "movie movie"    /* 2行目 */
-        "main   main"    /* 3行目 */
+        "hero hero"    /* 2行目 */
+        "main   aside"    /* 3行目 */
         "footer footer";  /* 4行目 */
     min-height: 100vh; /* 画面の高さ全体を使う */
 
@@ -22,3 +22,23 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
+
+/* 縦画面時 */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;       
+        min-height: 100vh;
+
+        /* 画面幅が狭い場合、サイドバーをメインの下に配置 */
+        grid-template-columns: 1fr; /* 1列にする */
+        grid-template-areas:
+            "header"
+            "hero"
+            "main"
+            "aside"
+            "footer";
+    }
+}
+

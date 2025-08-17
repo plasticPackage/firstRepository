@@ -1,0 +1,5 @@
+.picture{
+    max-width: 100%;       /* 画面幅を超えない */
+    box-sizing: border-box; /* padding込みで幅計算 */
+    overflow-x: auto;      /* はみ出したら横スクロール */
+}

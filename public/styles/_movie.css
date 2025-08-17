@@ -1,13 +1,3 @@
-
-movie {
-    grid-area: movie; /* movieエリアに配置 */
-    width: 100%;
-    background-color: #fff;
-}
-
-
-movie {
-    display: flex; /* Flexコンテナに */
-    flex-direction: column; /* ヘッダーの要素を縦並びにする */
-    align-items: center; /* 垂直方向中央揃え */
+.movie{
+    width: 100%; height: auto; aspect-ratio: 16 / 9;
 }

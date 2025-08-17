@@ -28,7 +28,7 @@
   /* メッセージ部分 */
   #alert-message {
     color: red;
-    font-size: 2.5rem; /* 大きく */
+    font-size: 1.5rem; /* 大きく */
     font-weight: bold;
     animation: blink 1s infinite; /* 点滅 */
   }
